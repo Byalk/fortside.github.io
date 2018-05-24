@@ -1,0 +1,390 @@
+body {
+    background: #0a0a0a !important;
+}
+
+/* MENU */
+
+nav {
+    background: rgb(0, 0, 0, 0.8);
+}
+
+.nav-link {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    font-size: 17px;
+    color: #c6c6c6;
+}
+
+.nav-link:hover {
+    color: #fff;
+    border-bottom: 3px solid #f0ed63;
+}
+
+.top-btn {
+    background: transparent;
+    border: 2px solid #f0ed63;
+    color: #c6c6c6;
+    font-family: 'Black Han Sans', sans-serif;
+    padding: 10px 10px 10px;
+    transition: all 0.3s;
+}
+.top-btn:hover {
+    background-color: #eeea4c;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+}
+
+/* SLIDER */
+
+section.hero {
+    min-height: 100vh;
+    position: relative;
+    background-image: url(../img/hero-bg.jpg);
+}
+
+section.hero::before {
+    display: inline-block;
+    color: #000;
+    opacity: 0.04;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 20rem
+}
+
+section.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+section.hero h1 {
+    font-size: 50px;
+    width: 600px;
+    text-shadow: 1px 1px #000;
+    font-family: 'Black Han Sans', sans-serif;
+    color: #fff;
+    animation: jelly 6s ease-in-out infinite;
+    transform-origin: 50% 50% 20px;
+}
+
+@keyframes jelly {
+    0% {
+        transform: perspective( 180px) rotateY( 5deg);
+    }
+
+    50% {
+        transform: perspective( 180px) rotateY( -5deg);
+    }
+
+    100% {
+        transform: perspective( 180px) rotateY( 5deg);
+    }
+}
+
+.fortnite-btn {
+    position: relative;
+    font-size: 1.75em;
+    color: #fff;
+    margin: 0 auto;
+    background: transparent;
+    color: #000;
+    font-family: 'Black Han Sans', sans-serif;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-left: 0;
+    width: 250px;
+    padding: 18px 0;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.fortnite-btn:hover:after {
+    background-color: #eeea4c;
+}
+
+.fortnite-btn span {
+    position: relative;
+    z-index: 100;
+    background-color: #f0ed63;
+}
+
+.fortnite-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    transition: background-color .3s ease-in-out;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, .5);
+    background-color: #f0ed63;
+}
+
+@media (max-width: 991.98px) {
+    section.hero {
+        font-size: 12px;
+        min-height: 600px;
+        height: auto
+    }
+}
+
+@media (max-width: 767.98px) {
+    section.hero {
+        font-size: 11px;
+        min-height: 600px;
+        height: auto
+    }
+
+    section.hero h1 {
+        font-size: 30px;
+    }
+
+    section.hero .container {
+        width: 100%
+    }
+}
+
+.card.features {
+    border: 0;
+    background: -moz-linear-gradient(top, #f0ed63 0%, #fc73b4 100%);
+    background: -webkit-linear-gradient(top, #f0ed63 0%, #fc73b4 100%);
+    background: linear-gradient(to bottom, #f0ed63 0%, #fc73b4 100%);
+    border-radius: 3px;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    color: #000;
+}
+
+.card.features .card-title {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.card.features .card-text {
+    font-size: 17px;
+    color: #fff;
+}
+
+@media (max-width:991px) {
+    .card.features {
+        margin-bottom: 2rem;
+    }
+    [class^="col-"]:last-child .card.features {
+        margin-bottom: 0;
+    }
+}
+
+.card.features:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    color: #fc73b4;
+    background: -moz-linear-gradient(top, #fc73b4 0%, #f0ed63 100%);
+    background: -webkit-linear-gradient(top, #fc73b4 0%, #f0ed63 100%);
+    background: linear-gradient(to bottom, #fc73b4 0%, #f0ed63 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.card.features:hover {
+    transform: translateY(-3px);
+    -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    margin-bottom: 3rem;
+}
+
+.section-title small {
+    color: #998a9b;
+}
+
+.tab-content {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #FFF;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+    padding: 3rem;
+}
+
+@media (max-width:992px) {
+    .tab-content {
+        padding: 1.5rem;
+    }
+}
+
+.tab-content p {
+    line-height: 1.8;
+}
+
+.tab-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.nav-tabs {
+    border-bottom: 0;
+}
+
+.nav-tabs .nav-item .nav-link,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    padding: 1rem 1rem;
+    border: none;
+    font-family: 'Black Han Sans', sans-serif;
+    border-radius: 0;
+    font-size: 19px;
+    color: #1b1b1b;
+    background: #f5eff7;
+}
+
+.nav-tabs .nav-link.active {
+    font-family: 'Black Han Sans', sans-serif;
+    background: #f0ed63 !important;
+    color: #000 !important;
+}
+.circle-icon {
+    font-family: 'Black Han Sans', sans-serif;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background-color: #f0ed63;
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+@media (max-width:992px) {
+    .circle-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        line-height: 50px;
+    }
+}
+
+.ui-steps li:hover .circle-icon {
+    background-image: -moz-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: -webkit-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: -ms-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.09);
+    color: #FFF;
+}
+
+.ui-steps li {
+    padding: 15px 0;
+}
+
+.ui-steps li:not(:last-child) {
+    border-bottom: 1px solid #252525;
+}
+
+.media-body h5 {
+    font-family: 'Black Han Sans', sans-serif;
+    color: #fff;
+    font-size: 28px;
+}
+
+.media-body p {
+    color: #dcdcdc;
+}
+
+.call-to-action {
+    text-align: center;
+    color: #FFF;
+    margin: 3rem 0;
+}
+
+.call-to-action .box-icon {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    transform: scale(0.85);
+    margin-bottom: 2.5rem;
+}
+
+.call-to-action h2 {
+    font-family: 'Black Han Sans', sans-serif;
+    color: #FFF;
+    font-size: 50px;
+}
+
+.call-to-action .tagline {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 20px;
+    color: #d1d1d1;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.btn-light img {
+    margin-right: 0.4rem;
+    vertical-align: text-bottom;
+}
+
+.my-4 .btn-fortnite {
+    background: #f0ed63;
+    color: #000;
+    font-family: 'Black Han Sans', sans-serif;
+    padding: 20px 20px 20px;
+    border-radius: 0px;
+}
+
+.bg-one {
+    background: #000000;
+}
+
+.bg-two {
+    background: #040404;
+}
+
+footer {
+    background: #040404 ! ;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: #999;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+footer small a {
+    color: #f0ed63;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+footer small a:hover {
+    color: #f7f47b;
+    text-decoration: none
+}
